@@ -1,0 +1,13 @@
+[20-Mar-2013 05:06:04] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'root'@'localhost' (using password: NO) in /home/softdate/public_html/demo/config/db_connect.php on line 5
+[20-Mar-2013 06:59:34] PHP Warning:  Invalid argument supplied for foreach() in /home/softdate/public_html/demo/del_sentmail.php on line 5
+[20-Mar-2013 06:59:51] PHP Warning:  Invalid argument supplied for foreach() in /home/softdate/public_html/demo/del_inbox.php on line 5
+[20-Mar-2013 07:02:14] PHP Warning:  Invalid argument supplied for foreach() in /home/softdate/public_html/demo/del_inbox.php on line 5
+[20-Mar-2013 07:13:47] PHP Warning:  Invalid argument supplied for foreach() in /home/softdate/public_html/demo/del_sentmail.php on line 5
+[31-Mar-2013 04:05:59] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: gd-jpeg: JPEG library reports unrecoverable error:  in /home/softdate/public_html/demo/thumbnail.inc.php on line 152
+[31-Mar-2013 04:05:59] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: 'images/user_images/1364720759.jpg' is not a valid JPEG file in /home/softdate/public_html/demo/thumbnail.inc.php on line 152
+[31-Mar-2013 04:05:59] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home/softdate/public_html/demo/thumbnail.inc.php on line 329
+[31-Mar-2013 04:05:59] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: gd-jpeg: JPEG library reports unrecoverable error:  in /home/softdate/public_html/demo/thumbnail.inc.php on line 152
+[31-Mar-2013 04:05:59] PHP Warning:  imagecreatefromjpeg() [<a href='function.imagecreatefromjpeg'>function.imagecreatefromjpeg</a>]: 'images/user_images/1364720759.jpg' is not a valid JPEG file in /home/softdate/public_html/demo/thumbnail.inc.php on line 152
+[31-Mar-2013 04:05:59] PHP Warning:  imagecopyresampled(): supplied argument is not a valid Image resource in /home/softdate/public_html/demo/thumbnail.inc.php on line 329
+[31-Mar-2013 04:05:59] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/softdate/public_html/demo/thumbnail.inc.php:152) in /home/softdate/public_html/demo/registration2.php on line 34
+[04-Apr-2013 03:53:24] PHP Warning:  Invalid argument supplied for foreach() in /home/softdate/public_html/demo/uimages.php on line 421

@@ -1,0 +1,53 @@
+<!doctype html>
+<head>
+    <!-- Basics -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <!-- Mobile -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/try.css">
+    <link rel="stylesheet" href="css/animate.css">
+</head>
+    <!-- Main HTML -->
+<body>
+    <!-- Begin Page Content -->
+    <div id="container">  <!-- start of container -->
+        <nav>
+	<ul>
+		<li id="login">
+			<a id="login-trigger" href="#">
+				Log in <span>▼</span>
+			</a>
+			<div id="login-content">
+				<form>
+					<fieldset id="inputs">
+						<input id="username" type="email" name="Email" placeholder="Your email address" required>   
+						<input id="password" type="password" name="Password" placeholder="Password" required>
+					</fieldset>
+					<fieldset id="actions">
+						<input type="submit" id="submit" value="Log in">
+						<label><input type="checkbox" checked="checked"> Keep me signed in</label>
+					</fieldset>
+				</form>
+			</div>                     
+		</li>
+	</ul>
+</nav>
+    </div> <!--  end of continer -->
+    <!-- End Page Content -->
+     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+	$('#login-trigger').click(function(){
+		$(this).next('#login-content').slideToggle();
+		$(this).toggleClass('active');					
+		
+		if ($(this).hasClass('active')) $(this).find('span').html('&#x25B2;')
+			else $(this).find('span').html('&#x25BC;')
+		})
+});
+    </script>
+</body>
+</html>

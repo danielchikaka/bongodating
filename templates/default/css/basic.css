@@ -1,0 +1,225 @@
+@charset "utf-8";
+/****************************************************************************************************
+* Filename: basic.css
+* Purpose: All the basic CSS Rules required to design web pages.
+* Author: Suraj Naik n[dot]suraj[at]agiletechnosys[dot]com
+****************************************************************************************************/
+
+/* GLOBAL RESETS
+**********************************************************/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent}
+input[type="radio"], input[type="checkbox"] {margin:0; padding:0; border:0; outline:0; font-size:100%; vertical-align:baseline; background:transparent}
+body {line-height:1}
+a {text-decoration:none}
+a:hover {text-decoration:underline}
+a:active, a:focus {outline:0} /* to avoid link borders on new browsers */
+img {border:none; vertical-align:-2px}
+table {border-collapse:collapse; border-spacing:0}
+
+/* DEFAULT FORM STYLING
+**********************************************************/
+input[type="submit"] {/*border:1px solid #003366*/}
+input[type="radio"], input[type="checkbox"] {vertical-align:-2px}
+
+/* INDIVIDUAL RESET
+**********************************************************/
+ul.reset, dl.reset, ul.makelist {list-style:none; padding:0; margin:0}
+
+/* ALIGN CENTER
+**********************************************************/
+.equalgap {margin:0 auto}
+
+/* FLOATS
+**********************************************************/
+.fl {float:left} .fr {float:right}
+.leftfloated > * {float:left}
+.rightfloated > * {float:right}
+.oppfloats > * {float:right}
+.oppfloats :first-child {float:left}
+
+/* COLUMN STRUCTURE
+**********************************************************/
+div[class*="qtr"] > * {width:25%}
+div[class*="hlf"] > * {width:50%}
+div[class*="trd"] > * {width:33%}
+div[class*="onethird"] > * {width:25%}
+div[class*="onethird"] :first-child {width:75%}
+
+/* GRID FORMULA
+**********************************************************/
+/* COMMON SELECTOR */
+div[class*="adjuster"],div[class*="adjuster"] > * {float:left; display:inline}
+/* grid with a column width of 26px / gutter 8px / 8 columns */ 
+.grid1 div.adjuster {margin-left:-8px}
+.grid1 div[class*="adjuster width"] {width:840px}
+.grid1 div[class*="adjuster width"] > * {width:26px; background:#FF0000; margin-left:8px}
+
+/* 100% HEIGHT
+**********************************************************/
+.taller > * {height:100%}
+
+/* CLEAR FLOAT
+**********************************************************/
+.clearfix:after, .container:after {content:"\0020"; display:block; height:0; clear:both; visibility:hidden; overflow:hidden}
+.clr {clear:both; padding:0; margin:0; overflow:hidden; height:0}
+
+/* CONTAINER HEADERS 
+**********************************************************/
+[class*="modhead"],[class*="modhead"] span {display:block; overflow:hidden}
+[class*="modhead"], div[class*="rndmod"] ,div[class*="rndmod"] div {overflow:hidden; background:url(../images/sprite.gif) no-repeat}
+
+/* POSITION ABSOLUTE
+**********************************************************/
+.absolute {position:absolute}
+.absoluted > * {position:absolute}
+
+/* POSITION RELATIVE
+**********************************************************/
+.rel {position:relative}
+
+/* WIDTH 100% 
+**********************************************************/
+.fullwid {width:100%}
+
+/* DISPLAY INLINE
+**********************************************************/
+.inline {display:inline}
+
+/* ALL TEXT CSS
+**********************************************************/
+/* font SIZES */
+.vsmlTxt {font-size:10px}
+.smlTxt {font-size:11px}
+.paraTxt {font-size:12px}
+.bigTxt {font-size:14px}
+
+/*font WEIGHTS */
+.strong {font-weight:bold} 
+.normTxt, .normTxt a {font-weight:normal;color:#2E0060;}
+.collr {color:#2E0060;}
+.collr a {font-weight:normal;color:#2E0060;}
+/* text TRANSFORMS */
+.allCaps,.allCaps a {text-transform:capitalize}
+.upperCase, .upperCase a {text-transform:uppercase}
+.underlined,.underlined a {text-decoration:underline}
+/* text ALIGN & content ALIGN for inline level ELEMENTS */
+.centerAll {text-align:center}
+.leftAlign {text-align:left}
+.rightAlign {text-align:right}
+.justified {text-align:justify}
+
+/* MAKE MENUS / TABS / NAVS
+**********************************************************/
+/* make tabs / navs */
+ul.maketabs li {float:left; display:inline}
+ul.maketabs li a, ul.maketabs li a span {display:block; float:left}
+/* make menus/ vertical menus */
+ul.makemenu li,ul.maketabs li a {display:block}
+
+/* OVERFLOW-HIDDEN
+**********************************************************/
+.ovfl-hidden {overflow:hidden}
+
+/* CREATE FORMS
+**********************************************************/
+ul.formH li label {float:left}
+ul.formV li label {display:block}
+
+/* Vertical Listing */
+ul.makelist li > img , ul.makelist li > div {float:left}
+
+
+/*Advertise form class*/
+.adverttr {
+list-style-image:none;
+list-style-position:outside;
+list-style-type:none;
+margin:0;
+padding:0;
+}
+.tdpaddchkbx { padding-top:1px; padding-bottom:1px; margin-top:1px; }
+.tdpadd{ padding-top:3px; padding-bottom:3px; margin-top:3px; }
+.adverttd{
+color:#999999;
+margin-bottom:7px;
+margin-top:8px;
+padding-top:10px;
+overflow:hidden;
+width:100%;
+}
+
+.advertlbl{
+color:#666666;
+cursor:pointer;
+float:left;
+font-size:12px;
+width:110px;
+}
+
+.advertselect {
+background:transparent url(../images/inputbg.gif) no-repeat scroll 0 -42px;
+border:medium none;
+height:21px;
+margin-right:20px;
+padding:2px;
+width:77px;
+}
+
+.advertinput{
+background:transparent url(../images/inputbg.gif) no-repeat scroll 0 -21px;
+border:medium none;
+float:left;
+height:15px;
+padding:3px 10px;
+width:258px;
+}
+
+.adverttwo {
+background-position:0 -95px;
+}
+.advertdesc {
+float:left;
+width:331px;
+}
+.chkbxlbl {
+color:#999999;
+float:none;
+font-size:12px;
+margin-right:38px;
+width:auto;
+}
+.chkbxinput {
+margin:0 7px 0 0;
+}
+
+.descmod {padding:0 14px}
+.descmod .descmodinn {width:607px; padding:23px 27px 0 31px; overflow:hidden} 
+.descmod .imagedv {float:right; margin-left:22px}
+.descmod .col1 {width:320px; float:left}
+.descmod .col1 p {font-size:13px; line-height:16px; padding-bottom:20px}
+.descmod .col1 h3 {font-size:16px; color:#5b3a81}
+.descmod .col1 h3 span {color:#666}
+.descmod .col1 .rating {font-size:11px}
+.descmod .col1 .rating img {margin-right:5px}
+
+.top1, .top1 div , .end1, .end1 div {background:url(../images/round.gif) 0 0 no-repeat; overflow:hidden}
+.top1 {background-position:0 0; padding-left:12px}
+.top1 div {background-position:100% 0; height:10px}
+.end1 {background-position:0 -10px; padding-left:12px}
+.end1 div {background-position:100% -10px; height:15px}
+.bg1 {background:url(../images/bg5.gif) 0 0 repeat-y; margin:0 1px 0 0; padding:0 4px; width:172px}
+
+
+.top2, .top2 div , .end2, .end2 div {background:url(../images/round1.gif) 0 0 no-repeat; overflow:hidden}
+.top2 {background-position:0 0; padding-left:7px}
+.top2 div {background-position:100% 0; height:7px}
+.end2 {background-position:0 -7px; padding-left:7px}
+.end2 div {background-position:100% -7px; height:8px}
+.bg2 {background:#fff url(../images/bg11.gif) 0 100% repeat-x; border:1px solid #e7e7e9; border-width:0 1px}
+.submitbtntbg12 {background:url(../images/submitbtn1.gif) 0 0 no-repeat; width:86px; height:29px; border:none; cursor:pointer; font-size:11px;
+padding-bottom:4px; color:#FFF}
+
+.red{color:red;}
+
+.green{color:green;}
