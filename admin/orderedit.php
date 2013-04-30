@@ -1,5 +1,5 @@
 <?
-if($_REQUEST['btn_delete']=="Delete"){ 
+if (isset($_REQUEST['btn_delete'])=="Delete"){ 
   if(is_array($_REQUEST['chk_id'])){ 
     foreach($_REQUEST['chk_id'] as $id){
 	  $sql="delete from payment where id='$id'"; 
@@ -9,7 +9,7 @@ if($_REQUEST['btn_delete']=="Delete"){
 	} 
   } ?><script>javascript:location.href="user.php?frm=orderedit&err=<?=$err?>";</script><? 
 }
-if($_REQUEST['btn_delete']=="Activate"){ 
+if (isset($_REQUEST['btn_delete'])=="Activate"){ 
   if(is_array($_REQUEST['chk_id'])){ 
     foreach($_REQUEST['chk_id'] as $id){ 
 	  $sql="update sponser set status='yes' where id='$id'"; 
@@ -18,7 +18,7 @@ if($_REQUEST['btn_delete']=="Activate"){
 	} 
   } ?><script>javascript:location.href="user.php?frm=catedit&err=<?=$err?>";</script><? 
 }
-if($_REQUEST['btn_delete']=="Deactivate"){ 
+if (isset($_REQUEST['btn_delete'])=="Deactivate"){ 
   if(is_array($_REQUEST['chk_id'])){
     foreach($_REQUEST['chk_id'] as $id){ 
 	  $sql="update sponser set status='N' where id='$id'"; 
@@ -62,7 +62,7 @@ if($_REQUEST['btn_delete']=="Deactivate"){
 		$tot_num_appt = mysql_num_rows($qry_pgs);
 		$tot_pgs = (mysql_num_rows($qry_pgs))/$t_rec;
 		$tot_pgs = $tot_pgs+1;
-		$strt=$_REQUEST['strt'];
+		$strt=isset($_REQUEST['strt']);
 		if($strt != ""){$pgs=" limit ".$strt.",$t_rec";} else{$pgs=" limit 0,$t_rec";}
 		$sql = $sql.$pgs;
 		$rs=mysql_query($sql);
@@ -75,16 +75,16 @@ if($_REQUEST['btn_delete']=="Deactivate"){
 		  $address2=$a_row['address2'];
           $city=$a_row['city'];
           $pin=$a_row['postalcode'];
-         $company=$a_row['company'];
+         $company=isset($a_row['company']);
          $email=$a_row['email'];
-         $refering=$a_row['refering'];
+         $refering=isset($a_row['refering']);
 		 $paymentfrom = "Paypal";
          $transaction_id=$a_row['transaction_id'];
-         $payer=$a_row['transaction_type'];
+         $payer=isset($a_row['transaction_type']);
 		  $payment_status=$a_row['status'];
 		  $amount_total=$a_row['subscription'];
 		   $date=$a_row['paymentdate'];
-		   $booked_class_id = $a_row['booked_class_id'];
+		   $booked_class_id =isset($a_row['booked_class_id']);
 		   $date1=date('m-d-Y',strtotime($date));
 		  if($cnt%2==0) $bgcolor=""; else $bgcolor="#F5F5F5"; 
 		  if($a_row['status']== "yes") $c_status="<img src='../images/activate_green.gif' />"; else $c_status="<img src='../images/deactivate_green.gif' />"; 
@@ -113,8 +113,8 @@ if($_REQUEST['btn_delete']=="Deactivate"){
 		$chk_pg=0;
 		for($pgno=1;$pgno<$tot_pgs;$pgno++){ 
 		  if($chk_pg > 0) $strt=$strt+$t_rec; else $strt=$chk_pg;
-		  if($_REQUEST['pgn']=="" && $pgno==1) $currpg="lnky";
-		  else if($_REQUEST['pgn']==$pgno) $currpg="lnky"; else $currpg="lnkn";
+		  if (isset($_REQUEST['pgn'])=="" && $pgno==1) $currpg="lnky";
+		  else if (isset($_REQUEST['pgn'])==$pgno) $currpg="lnky"; else $currpg="lnkn";
 		  print "<a href='user.php?frm=orderedit&sel_cat=".$_REQUEST['sel_cat']."&strt=".$strt."&pgn=".$pgno."' class='$currpg'>".$pgno."</a> ";
 			$chk_pg=$chk_pg+1;
 		}

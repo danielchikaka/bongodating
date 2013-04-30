@@ -167,8 +167,8 @@ if($_POST['button'] = 'Submit')
 <link href="templates/default/css/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div id="wrapper">
   <?php include_once("header.php");?>
+<div id="wrapper">
   <div id="maincont">
     <div id="illust">
       <div class="profl_contnt2">

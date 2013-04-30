@@ -59,7 +59,7 @@ if(isset($_POST['submit']))
       <a href="index.php" class="forgot_pass">Home</a>
       <form action="" method="post" class="niceform">
         <fieldset>
-        <div align="center"><?php echo $err;?></div>
+        <div align="center"><?php echo isset($err);?></div>
         <dl>
           <dt>
             <label for="email">Email:</label>

@@ -3,7 +3,8 @@ error_reporting(0);
 ?>
 
 <div id="header">
-  <h1 id="innerlogo" class="fl"><a href="index.php"><img src="images/logo/<?php echo SITE_LOGO ; ?>"> </a></h1>
+  <div id="header_wrapper">
+  <h1 id="innerlogo" ><a href="index.php"><img src="images/logo/<?php echo SITE_LOGO ; ?>"> </a></h1>
   <div id="login">
     <?php if(isset($_SESSION['SESS_email'])) {
 	// For login ?>
@@ -39,8 +40,12 @@ error_reporting(0);
           <td width="45%" valign="top" style="vertical-align:top"><div class="inputbox">
               <input type="password" name="pass" value="Password"  class="validate[required] input" id="pass" onblur="if (this.value == '') {this.value = 'Password';}" onfocus="if (this.value == 'Password') {this.value = '';}"  />
             </div></td>
-          <td width="10%" style="vertical-align:top"><input type="hidden" name="submit" id="submit" value="submit">
-            <input type="submit" name="button" id="button" value="" class="login"/></td>
+          <td width="10%" style="vertical-align:top">
+            <input type="hidden" name="submit" id="submit" value="submit">
+            <!-- <input type="submit" name="button" id="button" value="" class="login"/> -->
+             <button class="login"  name="button" id="button" value="Submit">Login</button>
+
+          </td>
         </tr>
       </table>
     </form>
@@ -97,4 +102,5 @@ error_reporting(0);
   </div>
   <div class="clr"></div>
   <?php } ?>
+  </div>
 </div>

@@ -1,6 +1,6 @@
 <?
   
-if($_REQUEST['btn_save']=="Submit") 
+if (isset($_REQUEST['btn_save'])=="Submit") 
 {
     $paypal_email = $_POST['paypal_email'];
      

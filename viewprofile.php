@@ -80,9 +80,9 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-<div id="wrapper">
   <!-- header container starts here-->
   <?php include_once("header.php");?>
+<div id="wrapper">
   <!-- header container ends here-->
   <!-- main container with changing content -->
   <div id="maincont">

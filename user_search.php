@@ -34,8 +34,8 @@ $fetch_info = mysql_fetch_array($userinfo);
 </script>
 </head>
 <body>
-<div id="wrapper">
   <?php include_once("header.php");?>
+<div id="wrapper">
   <div id="maincont">
     <div id="illust">
       <div class="profl_contnt2">

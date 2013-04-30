@@ -1,5 +1,5 @@
 <?
-if($_REQUEST['btn_save']=="Submit") {
+if (isset($_REQUEST['btn_save'])=="Submit") {
   if(trim($_POST['txt_pwd']) != "" && trim($_POST['txt_re_pwd']) !="")
   {
     $pwd 	= base64_encode($_REQUEST['txt_pwd']);

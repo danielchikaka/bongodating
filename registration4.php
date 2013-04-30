@@ -60,8 +60,8 @@ jQuery('a[rel*=facebox]').facebox({
 		});
 	});
 </script>
-<div id="wrapper">
   <?php include_once("header.php");?>
+<div id="wrapper">
   <div id="maincont">
     <div id="illust">
       <div class="chemistry_main" style="background:#f1f1f1;">

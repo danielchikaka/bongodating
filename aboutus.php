@@ -17,8 +17,8 @@ $page = mysql_fetch_array(mysql_query("select * from tbl_pages where pageid = 1 
 </head>
 
 <body>
-<div id="wrapper">
   <?php include_once("header.php");?>
+<div id="wrapper">
   <div id="maincont">
     <div id="illust">
       <div class="clr"></div>

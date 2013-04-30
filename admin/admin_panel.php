@@ -13,7 +13,7 @@
   <tr valign="middle">
     <td align="center" class="tdblue" height="40px">
 
-<p><span class="pheading style3">WELCOME ADMINISTRATOR </span><span class="pheading style3"><br> 
+<p><span class="pheading style3">---WELCOME ADMINISTRATOR </span><span class="pheading style3"><br> 
       </span><br>
 &laquo; Please select an option from the menu to edit the site.<br />
     </p></td>

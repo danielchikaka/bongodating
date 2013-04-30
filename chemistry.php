@@ -423,8 +423,8 @@ return true;
 </script>
 </head>
 <body>
-<div id="wrapper">
   <?php include_once("header.php");?>
+<div id="wrapper">
   <div id="maincont">
     <div id="illust">
       <form name="chemistry" id="chemistry" method="post" action="" onsubmit="return valid();">

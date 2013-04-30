@@ -309,8 +309,8 @@ if($_GET['delid']!='')
 <script type="text/javascript" src="js/jquery.imgareaselect.min.js"></script>
 </head>
 <body>
-<div id="wrapper">
   <?php include_once("header.php");?>
+<div id="wrapper">
   <div id="maincont">
     <div id="illust">
       <?php

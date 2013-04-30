@@ -102,8 +102,8 @@ $user_gender = $fetch_user['user_gender'];
 		});
 	});
 </script>
-<div id="wrapper">
   <?php include_once("header.php");?>
+<div id="wrapper">
   <div id="maincont">
     <div id="illust">
       <form name="form3" id="form3" action="" method="post">
@@ -633,6 +633,8 @@ $user_gender = $fetch_user['user_gender'];
     </div>
   </div>
 </div>
-<?php include_once("footer.php");?>
+<?php 
+include_once("footer.php");
+?>
 </body>
 </html>

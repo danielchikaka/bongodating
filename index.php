@@ -10,14 +10,18 @@ include_once("config/db_connect.php") ;
 <meta name="description" content="<?php echo SITE_DESCRIPTION; ?>"/>
 <meta name="keywords" content="<?php echo SITE_KEYWORD; ?>"/>
 
-<link rel="shortcut icon" type="image/x-icon" href="images/logo/<?php echo SITE_FAVICON; ?>"/>
+<!-- <link rel="shortcut icon" type="image/x-icon" href="images/logo/<?php echo SITE_FAVICON; ?>"/> -->
+<!-- <link href="theme/css/bootstrap.min.css" rel="stylesheet" type="text/css" /> -->
+<!-- <link href="theme/css/main.css" rel="stylesheet" type="text/css" /> -->
 <link href="templates/default/css/main.css" rel="stylesheet" type="text/css" />
 <script language="JavaScript" type="text/javascript" src="js/slideshow.js"></script>
 </head>
 <body onload="ss.restore_position('SS_POSITION');ss.next();ss.play();document.frmLogin1.email.focus();">
+<?php include_once("header.php"); ?>
 <div id="wrapper">
-  <?php include_once("header.php"); ?>
+  
   <div id="maincont">
+  	<h1>Join Bongo Dating For Free</h1>
     <div id="illust">
       <?php include_once("quicksearch.php"); ?>
       <div class="illust">
@@ -195,7 +199,9 @@ if(mysql_num_rows($finalsearch)>0)
 	  <? } ?>  
       <div class="clr"></div>
  </div>
-    <?php include_once("footer_up.php"); ?>
+    <?php 
+    // include_once("footer_up.php"); 
+    ?>
     
   </div>
 </div>

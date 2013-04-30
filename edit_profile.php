@@ -93,8 +93,8 @@ if(isset($_POST['submitform']))
 <link href="SpryAssets/SpryCollapsiblePanel.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div id="wrapper">
   <?php include_once("header.php");?>
+<div id="wrapper">
   <div id="maincont">
     <form name="update_basics" id="update_basics" method="post" action="">
       <div id="illust">

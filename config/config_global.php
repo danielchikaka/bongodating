@@ -4,6 +4,10 @@ define ("DBUSER","root");
 define ("DBPASS","");
 define ("DBNAME","dating");
 
+// define ("DBUSER","todrota_suzy");
+// define ("DBPASS","suzy??//");
+// define ("DBNAME","todrota_dating");
+
 
 /*define ("DBUSER","root");
 define ("DBPASS","");

@@ -28,8 +28,8 @@ include_once("config/ckh_session.php");
 
 </head>
 <body>
-<div id="wrapper">
   <?php include_once("header.php");?>
+<div id="wrapper">
   <div id="maincont">
     <div id="illust">
       <?php
@@ -119,7 +119,7 @@ include_once("config/ckh_session.php");
 	{
 	?>
 		  <div class="profl_txt_usersrch">
-			<div class="chemistry_main"><strong> <font color="#FF0000">Not enough local matches, defaulting to a state level search.</font><br />
+			<div class="chemistry_main"><strong> <font color="#fefe00">Not enough local matches, defaulting to a state level search.</font><br />
 			  (1) = One interest in common. If you don't have interests specified on your profile you will not have interests in common with anyone.
 			  Last 10 people to check their mail, in your state.</strong> </div>
 		  </div>
@@ -172,7 +172,7 @@ include_once("config/ckh_session.php");
 	}
 	} else { ?>
       <div class="chemistry_main" style="background:#f1f1f1;">
-        <div class="profl_txt_1" style="color:#CC0000;"><strong> Sorry - our My Matches list shows you users we've specifically chosen for you! Sometimes, this list runs out. Don't worry, new users will be added to the list soon.</strong>
+        <div class="profl_txt_1" style="color:#fefe00;"><strong> Sorry - our My Matches list shows you users we've specifically chosen for you! Sometimes, this list runs out. Don't worry, new users will be added to the list soon.</strong>
           <div class="clr"></div>
         </div>
       </div>

@@ -35,8 +35,8 @@ $fetch_info		= mysql_fetch_array($userinfo);
 <link type="text/css" rel="stylesheet" media="all" href="css/screen.css" />
 </head>
 <body>
-<div id="wrapper">
   <?php include_once("header.php");?>
+<div id="wrapper">
   <div id="maincont">
     <div id="illust">
       <div class="profl_contnt2">

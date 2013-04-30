@@ -111,9 +111,9 @@ form1.action = "gallery-active.php";
 <link type="text/css" rel="stylesheet" media="all" href="css/screen.css" />
 </head>
 <body>
+  <?php include_once("header.php");?>
 <div id="wrapper">
   <!-- header container starts here-->
-  <?php include_once("header.php");?>
   <!-- / header container ends here-->
   <!-- main container with changing content -->
   <div id="maincont">

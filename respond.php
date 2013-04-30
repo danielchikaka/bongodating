@@ -28,8 +28,8 @@ include_once("config/ckh_session.php");
 <link type="text/css" rel="stylesheet" media="all" href="css/screen.css" />
 </head>
 <body>
-<div id="wrapper">
   <?php include_once("header.php");?>
+<div id="wrapper">
   <div id="maincont">
     <div id="illust">
       <?php

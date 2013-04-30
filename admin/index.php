@@ -7,7 +7,7 @@ if($_REQUEST['err'] == "LogOut")
   $_SESSION['admin']="";
   session_destroy();
 }
-if($_POST['txt_pwd']<>"") {
+if (isset($_POST['txt_pwd'])<>"") {
   $userid	= $_POST['txt_userid'];
   $pwd		=  base64_encode($_POST['txt_pwd']);
   $sql		= "select * from admin where email = '$userid' and password = '$pwd' ";

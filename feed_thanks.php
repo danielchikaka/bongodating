@@ -13,8 +13,8 @@ include_once("config/db_connect.php");
 <link href="templates/default/css/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div id="wrapper">
   <?php include_once("header.php");?>
+<div id="wrapper">
   <div id="maincont">
     <div id="illust">
       <div class="chemistry_main" style="border: medium ridge; margin-top:30px;">

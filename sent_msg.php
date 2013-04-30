@@ -30,8 +30,8 @@ $query_note = mysql_fetch_array(mysql_query("select note from favorites where id
 <script language="JavaScript" type="text/javascript" src="js/slideshow.js"></script>
 </head>
 <body>
-<div id="wrapper">
   <?php include_once("header.php");?>
+<div id="wrapper">
   <div class="chemistry_main" style="background:#f1f1f1; margin-top:50px; width:750px;">
     <div class="clr"></div>
     <div class="chemistry_hd_txt" style="font-size:10px; color:#000000;">This Note Is Only Visible To You. Write Yourself A Note About Why You Added This Person To Your Favorites Etc. </div>

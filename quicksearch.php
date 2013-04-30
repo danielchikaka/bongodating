@@ -1,4 +1,5 @@
 <div class="welcome">
+    <h2>Start your Search!</h2>
   <form name="frm1" id="frm1" method="post" action="">
     <div class="form_flds">I am a <br />
       <select name="gender" id="gender" style="width:120px; margin-top:5px;">
@@ -50,7 +51,8 @@
     <div class="clr"></div>
     <div class="join_btn">
       <input type="hidden" name="subsearch" id="subsearch" />
-      <input type="image" src="images/search_btn.png" name="button" id="button" value="Submit" />
+      <!-- <input type="image"  name="button" id="button" value="Submit" /> -->
+      <button class="submit"  name="button" id="button" value="Submit">Search</button>
     </div>
   </form>
 </div>

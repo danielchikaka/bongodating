@@ -1,5 +1,5 @@
 <?
-if($_REQUEST['btn_save']=="Update") {
+if (isset($_REQUEST['btn_save'])=="Update") {
   $o_ans = addslashes($_POST['pc_TR_body']);
   $sql="update tbl_pages set pagetitle='".addslashes($_POST['t_title'])."', pagetext='".$o_ans."'";
   $sql=$sql." where pageid='".$_POST['id']."'";

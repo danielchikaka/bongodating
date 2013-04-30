@@ -1,12 +1,20 @@
-<? 
+<?php
+error_reporting(0);
+// or error_reporting(E_ALL & ~E_NOTICE); to show errors but not notices
+ini_set("display_errors", 0);
+?>
+<?php
 session_start();
 include("../config/db_connect.php");	
 require_once("../includes/class.paging.php");
 require_once("../classes/functions.php");
 if($_SESSION['admin'] == ""){
-  ?> <script>javascript:location.href="index.php?err=SignIn";</script> <? 
+?>
+<script>javascript:location.href="index.php?err=SignIn";</script>
+
+<?php
 }
-if($_POST['btn_submit'] == "Submit"){
+if (isset($_POST['btn_submit']) == "Submit"){
   $sql="insert into users_tbl set 
   u_fname='".addslashes($_POST['t_fname'])."', 
   u_lname='".addslashes($_POST['t_lname'])."', 
@@ -149,10 +157,6 @@ field[i].checked = false;
 checkflag = "false";
 }
 }
-
-
-
-
 </script>
 <script language="javascript" type="text/javascript" src="ckeditor/ckeditor.js"></script>
 
@@ -307,12 +311,12 @@ function sh(did)
 					<td width="84%" align="center" class="cbtn" style="letter-spacing:1"><strong><? print $pg_title; ?></strong></td>
                     </tr>
 					<? 
-					  if($_REQUEST['err'] != ""){ 
+					  if (isset($_REQUEST['err']) != ""){ 
 						print "<tr valign='middle'><td align='center' class='errmsg' height='16'>".$_REQUEST['err']."</td></tr>";
 					  } ?> 
 						<tr valign="top"><td style="margin-top:20px;">
 						<? 
-						$filename = $_GET[frm].".php";
+						$filename = $_GET['frm'].".php";
 						require_once($filename); 
 						?> </td></tr>
 					  </table></div>
@@ -326,7 +330,7 @@ function sh(did)
 			  </tr>
 			</table></td>
   </tr>
-  <tr valign="middle" height="40px;" align="center"><td align="center" ><div id="footerwrap" align="center" >&copy; Copyright <? //echo date("Y")?> <?PHP echo SITE_COPYRIGHT;?>. All rights reserved. &nbsp;&nbsp;&nbsp;&nbsp;Developed by : <a href="http://www.softechproducts.us">Softech Products</a></div></td></tr>
+  <tr valign="middle" height="40px;" align="center"><td align="center" ><div id="footerwrap" align="center" >&copy; Copyright <? //echo date("Y")?> <?PHP echo SITE_COPYRIGHT;?>. All rights reserved. &nbsp;&nbsp;&nbsp;&nbsp;Developed by : <a href="http://www.adroit.co.tz" target="_blank">Adroit Solutions</a></div></td></tr>
 </table>
 </body>
 </html>

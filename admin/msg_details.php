@@ -1,7 +1,11 @@
-
+<?php
+error_reporting(0);
+// or error_reporting(E_ALL & ~E_NOTICE); to show errors but not notices
+ini_set("display_errors", 0);
+?>
 <?
 //}
-if($_REQUEST['btn_delete']=="Delete")
+if (isset($_REQUEST['btn_delete'])=="Delete")
 { 
   if(is_array($_REQUEST['chk_id']))
   { 
@@ -14,7 +18,7 @@ if($_REQUEST['btn_delete']=="Delete")
 	} 
  } ?><script>javascript:location.href="user.php?frm=msg_details&err=<?=$err?>";</script><? 
 }
-if($_REQUEST['btn_delete']=="Activate")
+if (isset($_REQUEST['btn_delete'])=="Activate")
 { 
   if(is_array($_REQUEST['chk_id'])){ 
     foreach($_REQUEST['chk_id'] as $id)
@@ -26,7 +30,7 @@ if($_REQUEST['btn_delete']=="Activate")
 	} 
   } ?><script>javascript:location.href="user.php?frm=msg_details&err=<?=$err?>";</script><? 
 }
-if($_REQUEST['btn_delete']=="Deactivate")
+if (isset($_REQUEST['btn_delete'])=="Deactivate")
 { 
   if(is_array($_REQUEST['chk_id'])){
     foreach($_REQUEST['chk_id'] as $id)
@@ -62,7 +66,7 @@ if($_REQUEST['btn_delete']=="Deactivate")
 		$tot_num_appt = mysql_num_rows($qry_pgs);
 		$tot_pgs = (mysql_num_rows($qry_pgs))/$t_rec;
 		$tot_pgs = $tot_pgs+1;
-		$strt=$_REQUEST['strt'];
+		$strt= isset($_REQUEST['strt']);
 		if($strt != ""){$pgs=" limit ".$strt.",$t_rec";} else{$pgs=" limit 0,$t_rec";}
 		$sql = $sql.$pgs;
 		$rs=mysql_query($sql);
@@ -81,11 +85,11 @@ if($_REQUEST['btn_delete']=="Deactivate")
 		   <? 
 		  //print "</td>";
 		  
-		   print "<td align='center' class='a_txt' style='padding-left:2px;'>".stripslashes($senduser->user_name)."</td>";
-		    print "<td align='center' class='a_txt' style='padding-left:2px;'>".stripslashes($recuser->user_name)."</td>";
+		  print "<td align='center' class='a_txt' style='padding-left:2px;'>".stripslashes($senduser->user_name)."</td>";
+		  print "<td align='center' class='a_txt' style='padding-left:2px;'>".stripslashes($recuser->user_name)."</td>";
 		  print "<td align='center' class='a_txt' style='padding-left:2px;'>".$a_row->datetime."</td>";
 		  print "<td align='center' class='a_txt'>".$c_status."</td>"; 
-		  print "<td align='center' class='a_txt' style='padding-left:2px;'><a href='".user.'.php?frm=show_msg&id='."$id"."'>".Details."</a></td></tr>";
+		  print "<td align='center' class='a_txt' style='padding-left:2px;'><a href='".'user'.'.php?frm=show_msg&id='."$id"."'>".'Details'."</a></td></tr>";
 		  //print "<td align='center' class='a_txt' style='padding-left:2px;'>".Details."</td></tr>";
 		  $cnt++;  
 		} 
@@ -93,12 +97,12 @@ if($_REQUEST['btn_delete']=="Deactivate")
 		$chk_pg=0;
 		for($pgno=1;$pgno<$tot_pgs;$pgno++){ 
 		  if($chk_pg > 0) $strt=$strt+$t_rec; else $strt=$chk_pg;
-		  if($_REQUEST['pgn']=="" && $pgno==1) $currpg="lnky";
-		  else if($_REQUEST['pgn']==$pgno) $currpg="lnky"; else $currpg="lnkn";
+		  if (isset($_REQUEST['pgn'])=="" && $pgno==1) $currpg="lnky";
+		  else if (isset($_REQUEST['pgn'])==$pgno) $currpg="lnky"; else $currpg="lnkn";
 		  print "<a href='user.php?frm=msg_details&strt=".$strt."&pgn=".$pgno."' class='$currpg'>".$pgno."</a> ";
-			$chk_pg=$chk_pg+1;
+		  $chk_pg=$chk_pg+1;
 		}
-	    $pgnostop=$_REQUEST['strt']+$t_rec; 
+	    $pgnostop=($_REQUEST['strt']+$t_rec);
 		if($pgnostop > $tot_num_appt){ $newnum=$pgnostop-$tot_num_appt; $pgnostop=($_REQUEST['strt']+$t_rec)-$newnum; }
 		print "<br>";
 		if($tot_num_appt > 0){ print "Showing ".($_REQUEST['strt']+1)."-".$pgnostop." of total ".$tot_num_appt." Records"; }

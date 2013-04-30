@@ -22,8 +22,8 @@ $page = mysql_fetch_array(mysql_query("select * from tbl_pages where pageid = '"
 <script src="js/jquery.validationEngine.js" type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
-<div id="wrapper">
   <?php include_once("header.php");?>
+<div id="wrapper">
   <div id="maincont">
     <div id="illust">
       <div class="clr"></div>

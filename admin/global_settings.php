@@ -5,7 +5,7 @@ $size_requirement = array(174,91);
 $min_size_requirement=array(174,91);
 $path  = '../images/logo/';
   
-if($_REQUEST['btn_save']=="Submit") 
+if (isset($_REQUEST['btn_save'])=="Submit") 
 {
 
     $site_name = addslashes($_POST['site_name']);

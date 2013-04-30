@@ -1,5 +1,5 @@
 <?
-if($_REQUEST['btn_delete']=="Delete"){ 
+if (isset($_REQUEST['btn_delete'])=="Delete"){ 
   if(is_array($_REQUEST['chk_id'])){ 
     foreach($_REQUEST['chk_id'] as $id){
 	
@@ -40,7 +40,7 @@ if($_REQUEST['btn_delete']=="Delete"){
 		$tot_num_appt = mysql_num_rows($qry_pgs);
 		$tot_pgs = (mysql_num_rows($qry_pgs))/$t_rec;
 		$tot_pgs = $tot_pgs+1;
-		$strt=$_REQUEST['strt'];
+		$strt=isset($_REQUEST['strt']);
 		if($strt != ""){$pgs=" limit ".$strt.",$t_rec";} else{$pgs=" limit 0,$t_rec";}
 		
 	 $sql = $sql.$pgs; 
@@ -75,8 +75,8 @@ if($_REQUEST['btn_delete']=="Delete"){
 		$chk_pg=0;
 		for($pgno=1;$pgno<$tot_pgs;$pgno++){ 
 		  if($chk_pg > 0) $strt=$strt+$t_rec; else $strt=$chk_pg;
-		  if($_REQUEST['pgn']=="" && $pgno==1) $currpg="lnky";
-		  else if($_REQUEST['pgn']==$pgno) $currpg="lnky"; else $currpg="lnkn";
+		  if (isset($_REQUEST['pgn'])=="" && $pgno==1) $currpg="lnky";
+		  else if (isset($_REQUEST['pgn'])==$pgno) $currpg="lnky"; else $currpg="lnkn";
 		  print "<a href='user.php?frm=state_list&strt=".$strt."&pgn=".$pgno."' class='$currpg'>".$pgno."</a> ";
 			$chk_pg=$chk_pg+1;
 		}

@@ -58,8 +58,8 @@ if(isset($_POST['sub1']))
         </script>
 </head>
 <body>
-<div id="wrapper">
   <?php include_once("header.php");?>
+<div id="wrapper">
   <div id="maincont">
     <div id="illust">
       <div class="registration_form_main">
@@ -88,7 +88,9 @@ if(isset($_POST['sub1']))
       </div>
     </div>
     <div class="clr"></div>
-    <?php include_once("footer_up.php"); ?>
+    <?php 
+    // include_once("footer_up.php"); 
+    ?>
   </div>
 </div>
 <?php include_once("footer.php");?>

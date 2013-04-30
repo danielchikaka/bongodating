@@ -17,8 +17,8 @@ $uname	= mysql_fetch_array(mysql_query("select user_name from user where user_id
 <link href="templates/default/css/main.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-<div id="wrapper">
   <?php include_once("header.php");?>
+<div id="wrapper">
   <div id="maincont">
     <div id="illust">
       <div class="chemistry_main" style="background:#f1f1f1;">
